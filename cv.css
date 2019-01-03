@@ -8,8 +8,8 @@
 /* Boutons */
 
 #boutonBlanc {
-	width:15px;
-	height:15px;
+	width:17px;
+	height:17px;
     background: white;
 	font:bold 13px Arial;
 	border-radius:50%;
@@ -17,55 +17,60 @@
 	color:#fff;
     box-shadow: 1px 1px 1px black;
 }
+#boutonBlanc:hover {
+    background: grey;
+}
 
 #boutonRouge {
-	width:15px;
-	height:15px;
+	width:17px;
+	height:17px;
     background: red;
 	font:bold 13px Arial;
 	border-radius:50%;
 	border:none;
 	color:#fff;
 }
+#boutonRouge:hover {
+    background: grey;
+}
 
 #boutonBleu {
-	width:15px;
-	height:15px;
+	width:17px;
+	height:17px;
     background: blue;
 	font:bold 13px Arial;
 	border-radius:50%;
 	border:none;
 	color:#fff;
 }
+#boutonBleu:hover {
+    background: grey;
+}
 
 #boutonVert {
-	width:15px;
-	height:15px;
+	width:17px;
+	height:17px;
     background: green;
 	font:bold 13px Arial;
 	border-radius:50%;
 	border:none;
 	color:#fff;
 }
+#boutonVert:hover {
+    background: grey;
+}
 
 #boutonOrange {
-	width:15px;
-	height:15px;
+	width:17px;
+	height:17px;
     background: orange;
 	font:bold 13px Arial;
 	border-radius:50%;
 	border:none;
 	color:#fff;
 }
-
-#boutonNoir {
-	width:15px;
-	height:15px;
-    background: black;
-	font:bold 13px Arial;
-	border-radius:50%;
-	border:none;
-	color:#fff;
+#boutonOrange:hover {
+    background: grey;
 }
 
 
@@ -247,19 +252,23 @@ section table:hover
 
 /* Les Liens */
 
-#sommaire1 a {
-	padding:6px 0 6px 0;
+.boutonSommaire {
+    width: 130px;
+    padding:6px 5px 6px 5px;
 	font:bold 13px Arial;
 	background: darkgrey;
-	color:black;
 	border-radius:2px;
-	width:100px;
-	border:1px solid #ccc;
-	box-shadow:2px 2px 3px #999;
-    padding-left: 5px;
-    padding-right: 5px;
-    text-decoration: none;
+	border: 1px solid #ccc;
     box-shadow: 6px 6px 6px black;
+}
+
+.lienSommaire {
+    color:black;
+    text-decoration: none;
+}
+
+.boutonSommaire:hover {
+	background: grey;
 }
 
 

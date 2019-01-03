@@ -126,11 +126,36 @@ boutonElt.addEventListener("mouseup", retourPhotoNormal);
 
 // CONTENU DYNAMIQUE
 // Survol remplacant le titre
-function titreCache2() {
-    document.getElementById("titre2").textContent = "GPEC, Gestion de carrières...";
-    setTimeout(function() {
-        document.getElementById("titre2").textContent = "Responsable Emploi Formation SIRH";
-    }, 1000);
+
+var titre2 = document.getElementById("titre2");
+var titre22 = "Responsable Emploi Formation SIRH, GPEC, Gestion de carrières...   ";
+var premierIndice = 0;
+var dernierIndice = 33;
+var partieTitre22 = titre22.substring(premierIndice, dernierIndice);
+
+function titreCache2 () {
+   function defilementTitre() {
+    if (dernierIndice < 67) {
+        premierIndice = premierIndice + 1;
+        dernierIndice = dernierIndice + 1;
+        partieTitre22 = titre22.substring(premierIndice, dernierIndice);
+        titre2.textContent = partieTitre22;
+    } else {
+        // Annule l'exécution répétée
+        clearInterval(intervalId);
+        // Modifie le titre de la page
+        titre2.textContent = " GPEC, Gestion de carrières...";
+        // Modification du titre au bout de 2 secondes
+        setTimeout(function () {
+            titre2.textContent = "Responsable Emploi Formation SIRH";
+        }, 2000);
+    }
+}
+premierIndice = 0;
+dernierIndice = 33;
+    
+// Appelle la fonction diminuerCompteur toutes les secondes (1000 millisecondes)
+var intervalId = setInterval(defilementTitre, 250); 
 }
 
 var boutonEltTitre2 = document.getElementById("titre2");
