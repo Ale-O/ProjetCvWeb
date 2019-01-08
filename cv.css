@@ -247,6 +247,27 @@ section table:hover
     color: black;
     background-color: aquamarine;
     padding: 5px 10px 5px 5px;
+    
+    background-image: linear-gradient(90deg, #1CEDDF 0%, aquamarine 20%, #1CEDDF 40%, aquamarine 60%, #1CEDDF 80%, aquamarine 100%);
+    
+    position: relative; /* Permettra de décaler le bloc */;
+
+    animation-name: deplacerJauge; /* Nom de l'animation */
+    animation-duration: 10s; /* Durée de l'animation */
+    animation: deplacerJauge 1s linear alternate infinite ; /* Laisse le bloc dans sa position finale */
+}
+
+
+@keyframes deplacerJauge {
+    30% {
+        background-image: linear-gradient(90deg, aquamarine 0%, #1CEDDF 20%, aquamarine 40%, #1CEDDF 60%, aquamarine 80%, #1CEDDF 100%);
+    }
+    60% {
+        background-image: linear-gradient(90deg, aquamarine 0%, #1CEDDF 16%, aquamarine 32%, #1CEDDF 48%, aquamarine 66%, #1CEDDF 90%, aquamarine 100%);
+    }
+    90% {
+        background-image: linear-gradient(90deg, aquamarine 0%, #1CEDDF 14%, aquamarine 28%, #1CEDDF 42%, aquamarine 56%, #1CEDDF 70%, aquamarine 94%, #1CEDDF 100%);
+    }
 }
 
 
@@ -298,19 +319,23 @@ nav {
 /* Corps de Section : Expériences, formations, compétences */
 
 #blocDesBoutons {
-	border-radius:12px 0 12px 0;
+	display: flex;
+    justify-content: space-between;
+    border-radius:12px 0 12px 0;
+    border:1px solid #ccc;
 	background: darkgrey;
 	border:none;
 	color:#555;
 	font:bold 12px Verdana;
 	border:1px solid #ccc;
+    padding-top: 5px;
+    padding-right: 1%;
     padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 800px;
-    margin-right: 80px;
+    padding-left: 1%;
+    margin-top: 1%;
+    margin-left: 88%;
+    box-shadow: 6px 6px 6px black;
 }
-
 
 #corps {
     width: 100%;
@@ -335,6 +360,63 @@ nav {
 .BlocsDesExperiences li {
     font-family: verdana;
     font-size: 0.95em;
+}
+
+
+#handshake {
+    position: relative; /* Permettra de décaler le bloc */
+    top: 0px;
+}
+
+#handshake:hover {
+    margin-top: -10px; /* Simplifie le calcul des positions initiale et finale du bloc */
+    animation-name: deplacerBloc1; /* Nom de l'animation */
+    animation-duration: 0.5s; /* Durée de l'animation */
+    animation: deplacerBloc1 0.5s linear alternate infinite ;
+}
+
+@keyframes deplacerBloc1 {
+    from {
+        top: 10px; 
+    }
+    to {
+        bottom: 25%;
+    }
+}
+
+#motarboard {
+    position: relative; /* Permettra de décaler le bloc */
+}
+
+#motarboard:hover {
+    animation-name: deplacerBloc2; /* Nom de l'animation */
+    animation-duration: 1s; /* Durée de l'animation */
+    animation: deplacerBloc2 1s linear alternate infinite ;
+}
+
+@keyframes deplacerBloc2 {
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+#development-skill {
+    position: relative; /* Permettra de décaler le bloc */
+}
+
+#development-skill:hover {
+    animation-name: deplacerBloc3; /* Nom de l'animation */
+    animation-duration: 0.5s; /* Durée de l'animation */
+    animation: deplacerBloc3 0.5s linear alternate infinite ;
+}
+
+@keyframes deplacerBloc3 {
+    from {
+        transform: translateX(-5px); 
+    }
+    to {
+        transform: translateX(5px);
+    }
 }
 
 
@@ -374,6 +456,9 @@ nav {
     padding-bottom: 15px;
     box-shadow: 6px 6px 6px black;
     }
+    #blocDesBoutons {
+	display : none;
+}
 }
 
 @media screen and (max-width: 720px) 
@@ -393,7 +478,7 @@ nav {
 @media screen and (min-width: 1250px)
 /* Si la fenêtre fait un minimum de 1250px les logos peuvent apparaitre */
 {
-        #fif:hover 
+    #fif:hover 
     {
     background-image: url(image/FIF.JPG);
     background-repeat: no-repeat;
@@ -451,5 +536,3 @@ nav {
         font-size: 0.5em;
     }
 }
-
-
