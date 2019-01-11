@@ -59,30 +59,8 @@ var boutonEltOrange = document.getElementById("boutonOrange");
 boutonEltOrange.addEventListener("click", clicOrange);
 
 
-
-// BOUTON PHOTO
-// Photo qui bouge et qui change de couleur
-function photoBouge() {
-    var divsElts = document.getElementsByClassName("photo");
-    for (var i = 0; i < divsElts.length; i++) {
-        divsElts[i].style.boxShadow = "1px 1px 1px black";
-        divsElts[i].style.marginLeft = "1px";
-        divsElts[i].style.marginTop = "1px";
-    }
-}
-
-var boutonElt = document.getElementById("photo1");
-boutonElt.addEventListener("mousedown", photoBouge);
-
-
-function passagePhotoNegatif() {
-    var nouvellePhoto = document.createElement("img"); // Création d'un élément img
-    nouvellePhoto.src = "image/Photo-N.png"; // Définition de sa source
-    nouvellePhoto.alt = "Photo"; // Définition de son alt
-    nouvellePhoto.class = "photo"; // Définition de sa class
-    nouvellePhoto.id = "photoNegatif"; // Définition de son id
-    nouvellePhoto.title = "Ma photo"; // Définition de son titre
-    document.getElementById("photo1").replaceChild(nouvellePhoto, document.getElementById("photoNormal"));
+// Bouton Noir et Blanc caché
+function passageFondNoir() {
     var divsElts = document.getElementsByTagName("body");
         for (var i = 0; i < divsElts.length; i++) {
             divsElts[i].style.color = "white";
@@ -90,29 +68,11 @@ function passagePhotoNegatif() {
         }
 }
 
-boutonElt.addEventListener("mousedown", passagePhotoNegatif);
+var boutonElt = document.getElementById("photo1");
+boutonElt.addEventListener("mousedown", passageFondNoir);
 
 
-function photoRevient() {
-    var divsElts = document.getElementsByClassName("photo");
-    for (var i = 0; i < divsElts.length; i++) {
-        divsElts[i].style.boxShadow = "6px 6px 6px black";
-        divsElts[i].style.marginLeft = "auto";
-        divsElts[i].style.marginTop = "auto";
-    }
-}
-
-boutonElt.addEventListener("mouseup", photoRevient);
-
-
-function retourPhotoNormal() {
-    var anciennePhoto = document.createElement("img"); // Création d'un élément img
-    anciennePhoto.src = "image/Photo.jpg"; // Définition de sa source
-    anciennePhoto.alt = "Photo"; // Définition de son alt
-    anciennePhoto.class = "photo"; // Définition de sa class
-    anciennePhoto.id = "photoNormal"; // Définition de son id
-    anciennePhoto.title = "Ma photo"; // Définition de son titre
-    document.getElementById("photo1").replaceChild(anciennePhoto, document.getElementById("photoNegatif"));
+function retourFondBlanc() {
     var divsElts = document.getElementsByTagName("body");
     for (var i = 0; i < divsElts.length; i++) {
         divsElts[i].style.color = "black";
@@ -120,7 +80,7 @@ function retourPhotoNormal() {
     }
 }
 
-boutonElt.addEventListener("mouseup", retourPhotoNormal);
+boutonElt.addEventListener("mouseup", retourFondBlanc);
 
 
 
