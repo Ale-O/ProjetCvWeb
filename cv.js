@@ -123,5 +123,3 @@ boutonEltTitre2.addEventListener("mouseover", titreCache2);
 
 
 
-
-

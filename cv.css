@@ -213,6 +213,7 @@ nav table {
 nav table:hover
 {
     border: 2px double black;
+    border-radius: 10px;
     background-color: bisque;
 }
 
@@ -309,6 +310,17 @@ nav {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+#extraP {
+    padding: 0px 4px 0px 6px;
+}
+
+#extraP:hover {
+    border: 2px double black;
+    border-radius: 10px;
+    background-color: bisque;
+}
+
 
 /* Corps de Section : Expériences, formations, compétences */
 
@@ -472,42 +484,42 @@ nav {
 @media screen and (min-width: 1250px)
 /* Si la fenêtre fait un minimum de 1250px les logos peuvent apparaitre */
 {
-    #fif:hover 
+#fif:hover 
     {
-    background-image: url(image/FIF.JPG);
+    background-image: url(image/FIF.png);
     background-repeat: no-repeat;
     background-position: top right;
     }
 
 #altus:hover 
     {
-    background-image: url(image/Altus.JPG);
+    background-image: url(image/Altus.png);
     background-repeat: no-repeat;
     background-position: top right;
     }
 
 #ausy:hover 
     {
-    background-image: url(image/Ausy.JPG);
+    background-image: url(image/Ausy.png);
     background-repeat: no-repeat;
     background-position: top right;
     }
 
 #areva:hover 
     {
-    background-image: url(image/Areva.JPG);
+    background-image: url(image/Areva.png);
     background-repeat: no-repeat;
     background-position: top right;
     }
 #iae:hover 
     {
-    background-image: url(image/iae.JPG);
+    background-image: url(image/iae.png);
     background-repeat: no-repeat;
     background-position: top right;
     }
 #unicaen:hover 
     {
-    background-image: url(image/unicaen.JPG);
+    background-image: url(image/unicaen.png);
     background-repeat: no-repeat;
     background-position: top right;
     }
